@@ -19,7 +19,7 @@ function LabelChecker() {
     for (let key in formData) data.append(key, formData[key]);
     data.append('label', file);
 
-    const res = await fetch('https://label-backend-xpse.onrender.com/api/check-label', {
+    const res = await fetch('https://label-verification-app.onrender.com/api/check-label', {
       method: 'POST',
       body: data,
     });
