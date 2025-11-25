@@ -4,6 +4,7 @@ import pytesseract
 from PIL import Image
 import io
 import re
+import os
 
 # Set path to tesseract if needed (only for Windows)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -95,5 +96,7 @@ def check_label():
     return jsonify({'success': success, 'details': results})
 
 if __name__ == '__main__':
-    print("Flask backend running at http://localhost:5000")
-    app.run(debug=True)
+    # print("Flask backend running at http://localhost:5000")
+    # app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
