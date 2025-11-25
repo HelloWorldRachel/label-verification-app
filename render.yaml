@@ -8,6 +8,7 @@ services:
       apt-get update && apt-get install -y tesseract-ocr
       pip install -r requirements.txt
     startCommand: python app.py
+    autoDeploy: true
     envVars:
       - key: PORT
         value: 10000
