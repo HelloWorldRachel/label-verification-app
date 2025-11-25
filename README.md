@@ -68,7 +68,6 @@ If you want to run this project locally on your machine, follow these steps.
    ```bash
    python app.py
    ```
-By default, the app runs at: https://label-verification-c9ret5n6o-na-yangs-projects.vercel.app/
 
 #### Running Tests
 ```python
