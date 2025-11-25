@@ -1,14 +1,10 @@
 services:
   - type: web
     name: label-backend
-    env: python
+    env: docker           # CHANGED: from 'python' to 'docker'
     region: oregon
     plan: free
-    buildCommand: |
-      apt-get update && apt-get install -y tesseract-ocr
-      pip install -r requirements.txt
-    startCommand: python app.py
-    autoDeploy: true
+    rootDir: backend      # ADDED: Tells Render to look inside the backend folder
     envVars:
       - key: PORT
         value: 10000

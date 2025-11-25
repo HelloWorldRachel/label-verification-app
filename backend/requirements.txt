@@ -3,3 +3,5 @@ flask-cors==4.0.0
 pytesseract==0.3.10
 Pillow==10.0.0
 gunicorn
+opencv-python-headless
+numpy
